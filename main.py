@@ -1,3 +1,4 @@
+import sys
 from stats import count_words, char_count, sort_char
 
 # Function to read and return the contents of a file as a string
@@ -12,8 +13,13 @@ def get_book_text(file_path):
 
 # Main function to use get_book_text and print the contents
 def main():
+    # Check if the program is run with correct number of command line arguements.
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book")
+        sys.exit(1)
+        
     # Relative path to frankenstein.txt
-    file_path = "./books/frankenstein.txt"
+    file_path = sys.argv[1]
     # Get the book text using the get_book_text function
     book_text = get_book_text(file_path)
     # Count the number of words in the book text.
