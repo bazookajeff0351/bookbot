@@ -15,9 +15,9 @@ def get_book_text(file_path):
 def main():
     # Check if the program is run with correct number of command line arguements.
     if len(sys.argv) != 2:
-        print("Usage: python3 main.py <path_to_book")
+        print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
-        
+
     # Relative path to frankenstein.txt
     file_path = sys.argv[1]
     # Get the book text using the get_book_text function
